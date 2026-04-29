@@ -1,0 +1,84 @@
+body {
+    background-color: #fce4ec; /* Rosa suave de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+/* El Pastel */
+.cake {
+    width: 150px;
+    height: 80px;
+    background: #f48fb1;
+    border-radius: 15px 15px 5px 5px;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* La Vela */
+.candle {
+    width: 8px;
+    height: 35px;
+    background: white;
+    position: absolute;
+    top: -35px;
+    left: 71px;
+}
+
+/* La Llama con animación */
+.flame {
+    width: 12px;
+    height: 18px;
+    background: #ffeb3b;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: absolute;
+    top: -18px;
+    left: -2px;
+    box-shadow: 0 0 10px orange;
+    animation: moviendo 0.2s infinite alternate;
+}
+
+@keyframes moviendo {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+
+.cake::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.4); /* Crema blanca semi-transparente */
+    border-radius: 15px 15px 20px 20px;
+}
+
+.confeti {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -10px;
+    z-index: 10;
+    animation: caer linear infinite;
+}
+
+@keyframes caer {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Borra la línea "content" de .Happy_Birthday::after en tu CSS 
+   para que no se repita el texto con el del script */
+.Happy_Birthday::after {
+    content: ""; 
+}
