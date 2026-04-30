@@ -114,23 +114,32 @@ body {
 
 .carta-contenido {
     background: #fffdf5; /* Color papel antiguo */
-    padding: 50px 60px;
+    padding: 30px;
     border-radius: 5px;
     width: 90%;
-    max-width: 700%;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    animation: aparecer 0.5s ease;
+    max-width: 600%;
 
     max-height: 80vh;
     overflow-y: auto;
-    
-    /* Borde decorativo similar al de la imagen */
-    border: 10px double #f48fb1; 
-    position: relative;
 
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: aparecer 0.5s ease;
+
+    /* Borde decorativo similar al de la imagen */
+    border: 8px double #f48fb1; 
+    position: relative;
     margin: auto;
 }
+
+.carta-contenido::-webkit-scrollbar {
+    width: 6px;
+}
+.carta-contenido::-webkit-scrollbar-thumb {
+    background: #f48fb1;
+    border-radius: 10px;
+}
+
 
 /* Estilo para que el texto parezca escrito en líneas de cuaderno */
 .carta-contenido p {
